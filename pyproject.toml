@@ -8,6 +8,7 @@ packages = [{include = "qr_share_extension_example"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+qrshare ="^0.1.0"
 
 
 [build-system]

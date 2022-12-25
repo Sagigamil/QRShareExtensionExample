@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "qr-share-extension-example"
+version = "0.1.0"
+description = ""
+authors = ["Sagi <sagigamil9911@gmail.com>"]
+readme = "README.md"
+packages = [{include = "qr_share_extension_example"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

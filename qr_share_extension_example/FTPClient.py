@@ -17,15 +17,15 @@ class FTPClient(object):
     def upload(self, local_file_path):
         with open(local_file_path, 'rb') as f: 
             ftp = ftplib.FTP()
-            ftp.connect(host=self.ip, port=self.port)
-            ftp.login(username=self._user, passwd=self._password)
+            ftp.connect(host=self._ip, port=self._port)
+            ftp.login(user=self._user, passwd=self._password)
             ftp.cwd(self._remote_folder)
-            ftp.storbinary(os.path.basename(local_file_path), f)
+            ftp.storbinary(f'STOR a {os.path.basename(local_file_path)}', f)  
             ftp.close()
 
         full_remote_path = os.path.join(self._remote_folder, os.path.basename(local_file_path))
         
-        return f"ftp://{self.user}:{self._password}@{self._ip}/{full_remote_path}"
+        return f"ftp://{self._user}:{self._password}@{self._ip}/{full_remote_path}"
         
     @staticmethod
     def validate_init_params(**params):

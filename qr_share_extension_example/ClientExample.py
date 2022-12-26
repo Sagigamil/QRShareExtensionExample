@@ -1,6 +1,6 @@
 from qrshare.ClientInterface import ClientInterface
         
-class Client(object):
+class ClienExample(object):
     """
     The base class for client interfaces.
     """
@@ -23,7 +23,7 @@ class Client(object):
         Raises:
             NotImplementedError: If the method is not implemented by a subclass.
         """
-        raise NotImplementedError()
+        pass
 
     @staticmethod
     def validate_init_params(**params):
@@ -36,4 +36,4 @@ class Client(object):
         Raises:
             NotImplementedError: If the method is not implemented by a subclass.
         """
-        raise NotImplementedError()
+        pass

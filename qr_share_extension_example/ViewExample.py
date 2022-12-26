@@ -1,6 +1,6 @@
 from qrshare.ViewInterface import ViewInterface
 
-class ViewInterface(ViewInterface):
+class ViewExample(ViewInterface):
     """An interface for classes that define a view for displaying text.
 
     This interface defines a method for validating the parameters passed to
@@ -9,7 +9,7 @@ class ViewInterface(ViewInterface):
 
     def __init__(self, *args):
         """Initialize the view with the given arguments."""
-        super(ViewInterface, self).__init__(*args)
+        super(ViewExample, self).__init__(*args)
 
     @staticmethod
     def validate_init_params(**params):
@@ -26,4 +26,4 @@ class ViewInterface(ViewInterface):
         This method should display the string in some way, such as printing it to
         the console or rendering it in a GUI window.
         """
-        raise NotImplementedError()
+        pass
